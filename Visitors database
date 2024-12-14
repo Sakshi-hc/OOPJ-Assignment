@@ -1,0 +1,24 @@
+create database SMVITM1;
+use SMVITM1;
+CREATE TABLE visitors1 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    profession VARCHAR(100),
+    purpose VARCHAR(255),
+    contact_number VARCHAR(15),
+    visit_date DATE NOT NULL
+);
+ INSERT INTO visitors1 (name, profession, purpose, contact_number, visit_date)
+VALUES ('John Doe', 'Engineer', 'Meeting', '1234567890', '2024-11-25'),
+('Jane Smith', 'Doctor', 'Lecture', '9876543210', '2024-11-26'),
+('Emily Davis', 'Artist', 'Exhibition', '1122334455', '2024-11-27');
+ SELECT * FROM visitors1;
+ SELECT * FROM visitors1 WHERE name LIKE '%Jane%';
+ SELECT * FROM visitors1 WHERE visit_date = '2024-11-25';
+ UPDATE visitors1
+SET purpose = 'Updated Meeting Purpose'
+WHERE id = 1;
+ DELETE FROM visitors1 WHERE id = 2;
+ DELETE FROM visitors1;
+DROP table visitors1;
+ 
